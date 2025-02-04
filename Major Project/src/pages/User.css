@@ -1,0 +1,400 @@
+/* General Body Styles */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #232526, #414345);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* User Profile Container */
+.user-profile {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Profile Header */
+.profile-header {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    /* Ensure transparency */
+    backdrop-filter: blur(15px);
+    /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+/* News Section */
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Styling for each news item card */
+.news-item {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.news-item h3 {
+    font-size: 1.3rem;
+    color: #211e1e;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 1rem;
+    color: #0b0a0a;
+    margin-bottom: 15px;
+}
+
+.news-item a {
+    color: #00b4d8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Vote Section */
+.vote-button {
+    background: linear-gradient(135deg, #00c9ff, #92fe9d);
+    color: rgb(15, 14, 14);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.vote-button:hover {
+    background: linear-gradient(135deg, #92fe9d, #00c9ff);
+}
+
+/* Comment Box */
+.comment-box {
+    margin-top: 20px;
+}
+
+.comment-box textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: #080808;
+    font-size: 1rem;
+}
+
+.comment-button {
+    margin-top: 10px;
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    color: rgb(21, 19, 19);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.comment-button:hover {
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+}
+
+/* Comments Section */
+.comments-list ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.comments-list li {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+/* Error Message */
+.error-message {
+    color: #ff6b6b;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .news-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Additional Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 90%;
+    width: 300px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(31, 38, 135, 0.47);
+}
+
+/* Title Styling */
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Glass Button Styling */
+.glass-button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #111010;
+    padding: 12px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad390, #fbc2eb, #a1c4fd);
+    /* Vibrant gradient background */
+    background-size: 400% 400%;
+    /* Animate the gradient */
+    animation: gradientBG 15s ease infinite;
+    /* Smooth gradient animation */
+    color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Gradient Background Animation */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container for Glass Elements */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Glass Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent white */
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 90%;
+    width: 300px;
+    backdrop-filter: blur(15px);
+    /* Blur effect */
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    /* Soft shadow */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* Subtle border */
+    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Hover interaction */
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    /* Slight lift on hover */
+    box-shadow: 0 10px 40px rgba(31, 38, 135, 0.47);
+    /* Enhanced shadow */
+}
+
+/* Title */
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Styles */
+.glass-button {
+    background: rgba(255, 255, 255, 0.1);
+    /* Transparent white */
+    color: #fff;
+    padding: 12px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Subtle border */
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    /* Brighter hover effect */
+    transform: scale(1.1);
+    /* Scale up slightly on hover */
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .glass-card {
+        width: 90%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
+/* Button Styles */
+.glass-button {
+    background: rgba(255, 255, 255, 0.1);
+    /* Transparent white */
+    color: #ffffff;
+    /* White text */
+    padding: 12px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Subtle white border */
+    border-radius: 12px;
+    /* Rounded corners */
+    backdrop-filter: blur(10px);
+    /* Apply blur effect */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Smooth hover transition */
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    /* Slightly more opaque on hover */
+    color: #000000;
+    /* Change text color for contrast */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Add a soft shadow */
+}
+
+/* Footer Section */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #00b4d8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .glass-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .glass-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}
